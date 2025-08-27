@@ -1,0 +1,13 @@
+Anotações - Probabilidades e amostragem
+
+- scipy.stats.comb (n, k)
+- np.arange(0, n+1)
+- dados.sample ( n = tamanho_da_amostra, random_state = 101 )
+
+
+norm.pdf
+norm.cdf
+norm.sf
+
+poisson.
+binom.

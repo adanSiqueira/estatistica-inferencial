@@ -1,0 +1,74 @@
+Anotações - Correlação e Regressão
+
+statsmodels.api as sm
+
+• Índices de Covariância
+[series1, series2, series 3, ...] .cov()
+
+• Indices de correlação
+ - pandas.DataFrame.corr()
+
+• Graficos usados
+ - sns.lmplot() 	-> grafico da regressão
+ - sns.histplot
+ - sns.lmplot
+ - sns.boxplot
+ - sns.scatterplot
+ - probplot
+ - sns.qqplot ou sms.probplot
+ - sns.jointplot
+
+
+• Regressão Linear - método OLS
+
+- Dividindo variavel dependente e explicativa
+Y = [var_dependente] 
+X = sm.add_constant( [var_explicativa] )
+
+- Realizando  regressão
+resultado = sm.OLS(Y,X).fit()
+
+- Visualizando dados da regressão
+resultado.summary()
+
+- Prevendo resultados da regressão
+resultado.predict()
+
+-Resíduos
+resultado.resid()
+
+- SQE : sum of squared residuals
+resultado.ssr
+
+- SQR: explained sum of squares
+resultado.ess
+
+- R2: coeficiente de determinação
+resultado.rsquared
+
+-EQM - erro quadratico medio do modelo
+
+resultado.mse_model
+
+- EQM - erro quadrático médio dos resíduos - residual mean squared error 
+resultado.mse_resid
+
+- Graus de Liberdade dos resíduos - Degrees of Fredom of Residuals
+resultado.df_resid
+
+- Estatisticas de teste dos estimadores quadrados da regressão
+resultado.tvalues
+
+- P Valor dos estimadores quadrados da regressão
+resultado.pvalues
+
+- F Valor do modelo
+resultado.fvalue
+
+- P Valor do teste F
+resultado.f_pvalue
+
+
+
+
+

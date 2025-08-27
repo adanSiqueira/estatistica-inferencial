@@ -1,0 +1,99 @@
+Anotações - testes de hipoteses
+
+
+• Descobrindo estatisticas de teste e probabilidades
+ - scipy.stats.norm
+	ppf
+	cdf
+	sf
+	interval ( confidence = alpha, loc = media, scale = sigma/(n**0.5) )
+
+- scipy.stats.t
+	ppf
+	cdf
+	sf
+	interval ( confidence = alpha, loc = media, scale = sigma/(n**0.5) )
+
+
+
+• Intervalos de confiança
+ - scipy.stats.norm.interval ( confidence = alpha, loc = media, scale = sigma/(n**0.5) )
+ - scipy.stats.norm.t ( confidence = alpha, loc = media, scale = sigma/(n**0.5) )
+ - statsmodels.stats.weightstats.zconfint ([nota_media_dos_filmes_com_pelo_menos_10_votos]) -> 1 ou 2 amostras
+
+
+
+• Comparação de duas amostras
+- statsmodels.stats.weightstats.zconfint ([amostra1], [amostra2]) 
+
+-teste = statsmodels.stats.weightstats.DescrStatsW ([amostra1]) ; teste2 = statsmodels.stats.weightstats.DescrStatsW ([amostra2])
+ comparacao = teste.get_compare(teste_2)
+ comparacao.summary()
+
+
+
+• Teste de normalidade 
+scipy.stats.normaltest ( x= series) - Teste de D'Agostino e Pearson: amostras grandes
+scipy.stats.shapiro ( x= series) - Teste de Shapiro-Wilk: amostras pequenas
+
+
+• Teste de Variâncias
+scipy.stats.levene (grupo1, grupo2) - Teste de Levene
+
+
+• Teste z
+statsmodels.stats.weightstats.ztest( x1 = amostra, value = media, alternative = 'greater/less/'two-sided')
+	-> return z, p_value
+
+statsmodels.stats.weightstats.zconfint ([nota_media_dos_filmes_com_pelo_menos_10_votos])
+
+teste = statsmodels.stats.weightstats.DescrStatsW (amostra)
+teste.ztest_mean (media_testada, alternative = 'greater/less/two-sided')
+
+
+
+
+
+• Teste T
+scipy.stats.ttest_1samp (amostra, [media], alternative = 'greater/less/two-sided')
+
+scipy.stats.ttest_ind (amostra1, amostra2, alternative = 'greater/less/two-sided')
+
+teste = statsmodels.stats.weightstats.DescrStatsW (amostra)
+teste.ttest_mean (media_testada, alternative = 'greater/less/two-sided')
+
+
+
+
+
+• Mann-Whitney
+
+scipy.stats.mannwhitneyu ( amostra1, amostra2, alternative = 'greater/less/two-sided')
+	-> retorna estatistica U: mede quantas vezes os valores de um grupo sao maiores que os de outro, e P_valor
+
+• RunkSums
+
+
+• Chi Quadrado
+scipy.stats.chisquare(f_obs=f_observada, f_exp=f_esperada)
+
+
+• Wilcoxon: amostras pareadas
+
+scipy.stats.wilcoxon ( amostra_antes, amostra_depois )
+
+
+• Binomial
+scipy.stats.binomial
+	ppf
+	cdf
+	sf
+
+
+
+
+• Poisson
+scipy.stats.poisson
+	pdf
+	cdf
+	sd

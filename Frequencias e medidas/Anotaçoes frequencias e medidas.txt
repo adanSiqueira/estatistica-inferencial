@@ -1,0 +1,54 @@
+Anotações - Frequências e medidas
+
+pandas
+
+.isnull.any()
+.isnull.sum(
+.drop_duplicates(
+.unique()
+.describe()
+	(include = [object])
+.shape
+.value_counts()
+	- normalize = True/False
+.sort_values(ascending = True/False)
+pd.DataFrame( dicionário )
+.reset_index()
+.replace( dicionário )
+.rename ( index: ... , columns: ..., inplace = True)
+.stats.percentileofscore(df.Renda, 788, kind = 'weak')
+
+pd.crosstab (series1, series2, aggfunc = '', values = series3)
+
+pd.to_datetime( [dado do tipo object] )
+
+
+
+.min()
+.max()
+
+[valores do tipo data].dt.month
+[valores do tipo data].dt.day
+[valores do tipo data].dt.hour
+[valores do tipo data].dt.date
+
+
+.loc['linha', 'coluna']
+.loc[ ['linha1', 'linha2'] ]
+.iloc[linha]
+
+.sample( tamanho, random_state = )
+
+.quantile()
+
+
+-> ex:
+classes = [0, 1576, 3152, 7880, 15760, 200000]
+labels = ['E', 'D', 'C', 'B', 'A']
+
+pd.cut( x = series, 
+	bins = classes,
+	labels = labels,
+	include_lowest = True/False )
+
+

@@ -1,0 +1,4 @@
+Anotações - Probabilidades e amostragem
+
+- scipy.stats.comb (n, k)
+- np.arange(0, n+1)
