@@ -5,7 +5,7 @@ O objetivo é consolidar conceitos fundamentais de estatística aplicados a prob
 
 ---
 
-## 📚 Conteúdos Abordados
+## Conteúdos Abordados
 
 Os notebooks estão organizados em tópicos progressivos:
 
@@ -42,7 +42,7 @@ Os notebooks estão organizados em tópicos progressivos:
 
 ---
 
-## 🛠️ Tecnologias e Bibliotecas Utilizadas
+## 🛠 Tecnologias e Bibliotecas Utilizadas
 
 - **Linguagem**: Python 3.x  
 - **Bibliotecas principais**:
